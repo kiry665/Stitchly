@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_projectsFragment_to_projectFragment"
             app:destination="@id/projectFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
     <fragment
@@ -38,6 +41,13 @@
         <argument
             android:name="partId"
             app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.kiry665.stitchly.settings.SettingsFragment"
+        android:label="Settings">
+
     </fragment>
 
 </navigation>

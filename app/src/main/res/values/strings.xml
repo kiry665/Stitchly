@@ -2,6 +2,8 @@
     <string name="app_name">Stitchly</string>
     <string name="title_activity_main">Stitchly</string>
 
+    <string name="settings">Настройки</string>
+
     <string name="cancel">Отмена</string>
     <string name="create">Создать</string>
     <string name="save">Сохранить</string>
@@ -30,6 +32,9 @@
 
     <string name="must_be_greater_than_zero">Число должно быть больше 0</string>
     <string name="invalid_number">Введите целое число</string>
+
+    <string name="vibration_feedback">Виброотклик</string>
+    <string name="keep_screen_on">Держать экран включенным</string>
 
 
 </resources>

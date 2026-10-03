@@ -128,7 +128,10 @@ public class ProjectListFragment extends Fragment {
         );
     }
     private void openSettings() {
-
+        NavHostFragment.findNavController(this)
+                .navigate(
+                        R.id.action_projectsFragment_to_settingsFragment
+                );
     }
 
 }

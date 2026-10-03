@@ -1,6 +1,7 @@
 package com.kiry665.stitchly.part;
 
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,6 +23,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.kiry665.stitchly.R;
 import com.kiry665.stitchly.project.ui.details.ProjectDetailsViewModel;
+import com.kiry665.stitchly.settings.SettingsRepository;
 import com.kiry665.stitchly.util.DialogHelper;
 
 public class PartFragment extends Fragment {
@@ -85,14 +87,17 @@ public class PartFragment extends Fragment {
                 view.findViewById(R.id.resetButton);
 
         incrementButton.setOnClickListener(v -> {
+            performHapticFeedback(view);
             viewModel.increment();
         });
 
         decrementButton.setOnClickListener(v -> {
+            performHapticFeedback(view);
             viewModel.decrement();
         });
 
         resetButton.setOnClickListener(v -> {
+            performHapticFeedback(view);
             showResetPartCounterDialog();
         });
     }
@@ -197,6 +202,17 @@ public class PartFragment extends Fragment {
         } else {
             counter.setText(
                     String.valueOf(part.currentRow)
+            );
+        }
+    }
+
+    private void performHapticFeedback(View view) {
+        SettingsRepository settingsRepository =
+                new SettingsRepository(requireContext());
+
+        if (settingsRepository.isVibrationEnabled()) {
+            view.performHapticFeedback(
+                    HapticFeedbackConstants.KEYBOARD_TAP
             );
         }
     }
