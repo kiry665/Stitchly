@@ -1,0 +1,27 @@
+# Gradle caches and build output
+/.gradle/
+/.gradle-user/
+**/build/
+
+# Local Android/IDE configuration
+/local.properties
+/.idea/
+*.iml
+/captures/
+
+# Native build output
+/.externalNativeBuild/
+/.cxx/
+
+# Signing credentials and secrets
+*.jks
+*.keystore
+keystore.properties
+
+# Generated application packages
+*.apk
+*.aab
+
+# Operating-system files
+.DS_Store
+Thumbs.db

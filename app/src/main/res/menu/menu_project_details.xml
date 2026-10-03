@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_more"
+        android:title="More"
+        android:icon="@drawable/ic_more_vertical"
+        app:showAsAction="ifRoom">
+
+        <menu>
+
+            <item
+                android:id="@+id/action_edit_project"
+                android:title="@string/rename" />
+
+            <item
+                android:id="@+id/action_delete_project"
+                android:title="@string/delete" />
+
+        </menu>
+
+    </item>
+</menu>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Stitchly</string>
+    <string name="title_activity_main">Stitchly</string>
+
+    <string name="cancel">Отмена</string>
+    <string name="create">Создать</string>
+    <string name="save">Сохранить</string>
+    <string name="rename">Переименовать</string>
+    <string name="delete">Удалить</string>
+    <string name="reset">Сбросить</string>
+    <string name="required">Обязательно</string>
+    <string name="edit">Редактировать</string>
+
+    <string name="create_project">Создать проект</string>
+    <string name="create_part">Создать часть проекта</string>
+    <string name="rename_project">Переименовать проект</string>
+    <string name="rename_part">Переименовать часть проекта</string>
+    <string name="edit_part">Редактировать часть проекта</string>
+    <string name="delete_project">Удалить проект</string>
+    <string name="delete_part">Удалить часть проекта</string>
+    <string name="reset_counter">Сбросить счётчик</string>
+
+    <string name="project_name">Название проекта</string>
+    <string name="part_name">Название части проекта</string>
+    <string name="target">Цель</string>
+
+    <string name="reset_message">Текущий счётчик будет сброшен на 0</string>
+    <string name="delete_part_message">Часть проекта будет удалена</string>
+    <string name="delete_project_message">Проект и все его части будут удалены</string>
+
+    <string name="must_be_greater_than_zero">Число должно быть больше 0</string>
+    <string name="invalid_number">Введите целое число</string>
+
+
+</resources>

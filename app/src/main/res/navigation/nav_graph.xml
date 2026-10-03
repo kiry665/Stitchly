@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/projectsFragment">
+
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.kiry665.stitchly.project.ui.list.ProjectListFragment"
+        android:label="Projects">
+
+        <action
+            android:id="@+id/action_projectsFragment_to_projectFragment"
+            app:destination="@id/projectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="com.kiry665.stitchly.project.ui.details.ProjectDetailsFragment"
+        android:label="Project">
+
+        <argument
+            android:name="projectId"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_projectFragment_to_counterFragment"
+            app:destination="@id/counterFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="com.kiry665.stitchly.part.PartFragment"
+        android:label="Counter">
+
+        <argument
+            android:name="partId"
+            app:argType="long" />
+    </fragment>
+
+</navigation>
