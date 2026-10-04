@@ -6,6 +6,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.kiry665.stitchly.history.HistoryDao;
+import com.kiry665.stitchly.history.HistoryEntity;
 import com.kiry665.stitchly.part.PartDao;
 import com.kiry665.stitchly.part.PartEntity;
 import com.kiry665.stitchly.project.model.ProjectDao;
@@ -14,9 +16,10 @@ import com.kiry665.stitchly.project.model.ProjectEntity;
 @Database(
         entities = {
                 ProjectEntity.class,
-                PartEntity.class
+                PartEntity.class,
+                HistoryEntity.class
         },
-        version = 1,
+        version = 2,
         exportSchema = false
 )
 public abstract class AppDatabase extends RoomDatabase {
@@ -25,6 +28,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     public abstract ProjectDao projectDao();
     public abstract PartDao partDao();
+    public abstract HistoryDao historyDao();
 
     public static AppDatabase getInstance(Context context) {
         if (INSTANCE == null) {

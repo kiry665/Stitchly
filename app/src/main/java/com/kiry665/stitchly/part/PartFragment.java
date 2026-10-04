@@ -22,6 +22,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.kiry665.stitchly.R;
+import com.kiry665.stitchly.history.HistoryBottomSheetFragment;
 import com.kiry665.stitchly.project.ui.details.ProjectDetailsViewModel;
 import com.kiry665.stitchly.settings.SettingsRepository;
 import com.kiry665.stitchly.util.DialogHelper;
@@ -140,6 +141,26 @@ public class PartFragment extends Fragment {
 
                         if (id == R.id.action_delete_part) {
                             showDeletePartDialog();
+                            return true;
+                        }
+
+                        if (id == R.id.action_history) {
+                            Bundle args = new Bundle();
+                            args.putLong(
+                                    "partId",
+                                    viewModel.getPart().getValue().id
+                            );
+
+                            HistoryBottomSheetFragment bottomSheet =
+                                    new HistoryBottomSheetFragment();
+
+                            bottomSheet.setArguments(args);
+
+                            bottomSheet.show(
+                                    getParentFragmentManager(),
+                                    "HistoryBottomSheet"
+                            );
+
                             return true;
                         }
 

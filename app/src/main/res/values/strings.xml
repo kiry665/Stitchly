@@ -12,6 +12,7 @@
     <string name="reset">Сбросить</string>
     <string name="required">Обязательно</string>
     <string name="edit">Редактировать</string>
+    <string name="history">История</string>
 
     <string name="create_project">Создать проект</string>
     <string name="create_part">Создать часть проекта</string>

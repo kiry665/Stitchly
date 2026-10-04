@@ -56,7 +56,6 @@ public interface PartDao {
             currentRow = 0,
             updatedAt = :time
         WHERE id = :partId
-            
     """)
     void reset(long partId, long time);
 
@@ -76,5 +75,13 @@ public interface PartDao {
             WHERE id = :partId
     """)
     void updatePart(long partId, String name, Integer targetRows, long time);
+
+    @Query("""
+        SELECT currentRow
+        FROM parts
+        WHERE id = :partId
+        LIMIT 1
+    """)
+    int getCurrentRow(long partId);
 
 }
